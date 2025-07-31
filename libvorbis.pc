@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libvorbis
+Description: The Ogg Vorbis audio codec
+Version: 1.3.7
+Libs: -L${libdir} -lvorbis -lvorbisenc -lvorbisfile
+Cflags: -I${includedir}/vorbis
