@@ -1,4 +1,11 @@
 #!/bin/bash
+wget https://downloads.sourceforge.net/opencore-amr/fdk-aac-2.0.2.tar.gz
+tar -xf https://downloads.sourceforge.net/opencore-amr/fdk-aac-2.0.2.tar.gz
+cd fdk-aac-2.0.2
+./configure --prefix=/usr --disable-static &&
+make -j$(nproc)
+make install
+
 wget https://ffmpeg.org/releases/ffmpeg-5.1.tar.xz
 wget https://www.linuxfromscratch.org/patches/blfs/11.2/ffmpeg-5.1-chromium_method-1.patch
 tar -xf ffmpeg-5.1.tar.xz
